@@ -4,4 +4,4 @@
     - [🐦](https://twitter.com/godsfryingpan)
 - Jay Prachyl
     - [📷](https://www.instagram.com/decora.demon/)
-    - [🕸️](https://www.jayprachyl.art/)
+    - [🖌️](https://www.jayprachyl.art/)
