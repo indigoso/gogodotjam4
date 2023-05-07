@@ -28,8 +28,6 @@ for (index, line) in enumerate(data):
         idx = index
         break
 
-print(version[21:28])
-
 ver = update_version(version[21:28])
 
 next_ver = version[:len(version) - 8] + ver + '\n'

@@ -2,5 +2,8 @@
 
 python3 update-ver.py
 
-git commit * -m "committed with packager"
+echo Enter the commit message:
+read commitmessage
+
+git commit * -m "$commitmessage"
 git push
