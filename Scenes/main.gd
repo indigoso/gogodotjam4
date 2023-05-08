@@ -2,6 +2,7 @@ extends Node
 
 var title_screen = preload("res://Scenes/title_screen.tscn")
 var about_screen = preload("res://Scenes/about_screen.tscn")
+var intro_screen = preload("res://Scenes/game_intro.tscn")
 
 var current_scene = null
 
@@ -24,7 +25,8 @@ func perform_swap(new_screen):
 func swap_screen(screen_title: String):
 	match screen_title:
 		Constants.SCREEN_PLAY:
-			pass
+			perform_swap(intro_screen)
+			current_scene.return_to_menu.connect(swap_screen)
 		Constants.SCREEN_ABOUT:
 			perform_swap(about_screen)
 			current_scene.go_back.connect(swap_screen)
