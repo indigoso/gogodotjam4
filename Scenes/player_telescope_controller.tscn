@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cow0wcrsfeewi"]
+
+[ext_resource type="Script" path="res://Scenes/player_telescope_controller.gd" id="1_f75yb"]
+[ext_resource type="Texture2D" uid="uid://c3wde2g7at6sr" path="res://Assets/kisspng-reticle-computer-icons-crosshair-5acc822ad26676.5846619915233521068618.png" id="2_xh5xb"]
+
+[node name="PlayerTelescopeController" type="Node2D"]
+script = ExtResource("1_f75yb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1750
+limit_bottom = 1000
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("2_xh5xb")

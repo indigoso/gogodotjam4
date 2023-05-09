@@ -3,6 +3,8 @@ extends Node
 var title_screen = preload("res://Scenes/title_screen.tscn")
 var about_screen = preload("res://Scenes/about_screen.tscn")
 var intro_screen = preload("res://Scenes/game_intro.tscn")
+var desk_screen = preload("res://Scenes/game_desk_view.tscn")
+var tele_screen = preload("res://Scenes/game_star_view.tscn")
 
 var current_scene = null
 
@@ -25,8 +27,8 @@ func perform_swap(new_screen):
 func swap_screen(screen_title: String):
 	match screen_title:
 		Constants.SCREEN_PLAY:
-			perform_swap(intro_screen)
-			current_scene.return_to_menu.connect(swap_screen)
+			perform_swap(desk_screen)
+			current_scene.enter_telescope.connect(swap_screen)
 		Constants.SCREEN_ABOUT:
 			perform_swap(about_screen)
 			current_scene.go_back.connect(swap_screen)
@@ -35,3 +37,9 @@ func swap_screen(screen_title: String):
 		Constants.SCREEN_TITLE:
 			perform_swap(title_screen)
 			current_scene.toggle_screen.connect(swap_screen)
+		Constants.SCREEN_DESK:
+			perform_swap(desk_screen)
+			current_scene.enter_telescope.connect(swap_screen)
+		Constants.SCREEN_TELE:
+			perform_swap(tele_screen)
+			current_scene.return_to_desk.connect(swap_screen)

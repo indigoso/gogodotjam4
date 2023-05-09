@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://07icxwltjl16"]
+
+[ext_resource type="Script" path="res://Scenes/game_desk_view.gd" id="1_qdieq"]
+[ext_resource type="Texture2D" uid="uid://cvxqf2xstlyb6" path="res://Assets/IMG_6686.jpg" id="2_bq57e"]
+
+[node name="GameDeskView" type="Node2D"]
+script = ExtResource("1_qdieq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Desk" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.853
+offset_bottom = 0.255981
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bq57e")
+
+[node name="BelowDesk" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.853
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.255981
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="btnEnableTelescope" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.192
+anchor_top = 0.739
+anchor_right = 0.5
+anchor_bottom = 0.827
+offset_left = -0.184006
+offset_top = 0.127991
+offset_right = 5.0
+offset_bottom = 0.104004
+text = "Access Telescope"
+
+[node name="btnViewStatus" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.681
+anchor_top = 0.67
+anchor_right = 0.9
+anchor_bottom = 0.758
+offset_left = -0.512085
+offset_top = -0.160004
+offset_right = 0.199951
+offset_bottom = -0.184021
+text = "View Status"
+
+[connection signal="pressed" from="CanvasLayer/btnEnableTelescope" to="." method="_on_btn_enable_telescope_pressed"]
