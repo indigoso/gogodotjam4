@@ -1,6 +1,6 @@
 extends Node
 
-const GAME_VERSION = "0.1.6"
+const GAME_VERSION = "0.1.7"
 const GAME_TITLE = "Cosmos"
 
 const SCREEN_PLAY = "screen_play"

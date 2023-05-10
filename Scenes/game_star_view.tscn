@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8u3am6rfd2g5"]
+[gd_scene load_steps=5 format=3 uid="uid://c8u3am6rfd2g5"]
 
 [ext_resource type="Texture2D" uid="uid://bsj3jidl8r7" path="res://Assets/photo-1465101162946-4377e57745c3.jpg" id="1_bekxv"]
 [ext_resource type="Script" path="res://Scenes/game_star_view.gd" id="1_ohxka"]
 [ext_resource type="PackedScene" uid="uid://cow0wcrsfeewi" path="res://Scenes/player_telescope_controller.tscn" id="2_y87bx"]
+[ext_resource type="PackedScene" uid="uid://pp4teb2n13hj" path="res://Scenes/floating_object.tscn" id="4_w74fe"]
 
 [node name="GameStarView" type="Node2D"]
 script = ExtResource("1_ohxka")
@@ -14,3 +15,7 @@ texture = ExtResource("1_bekxv")
 
 [node name="PlayerTelescopeController" parent="." instance=ExtResource("2_y87bx")]
 position = Vector2(685.836, 436.755)
+
+[node name="FloatingObject" parent="." instance=ExtResource("4_w74fe")]
+position = Vector2(1127.57, 404.503)
+obj_type = 1

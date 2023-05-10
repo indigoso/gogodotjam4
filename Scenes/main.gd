@@ -8,6 +8,8 @@ var tele_screen = preload("res://Scenes/game_star_view.tscn")
 
 var current_scene = null
 
+var in_telescope_view = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	current_scene = title_screen.instantiate()
@@ -25,6 +27,7 @@ func perform_swap(new_screen):
 	add_child(current_scene)
 
 func swap_screen(screen_title: String):
+	in_telescope_view = false
 	match screen_title:
 		Constants.SCREEN_PLAY:
 			perform_swap(desk_screen)
@@ -43,3 +46,4 @@ func swap_screen(screen_title: String):
 		Constants.SCREEN_TELE:
 			perform_swap(tele_screen)
 			current_scene.return_to_desk.connect(swap_screen)
+			in_telescope_view = true

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://pp4teb2n13hj"]
+
+[ext_resource type="Script" path="res://Scenes/floating_object.gd" id="1_fm8d8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w22j6"]
+radius = 72.111
+
+[node name="FloatingObject" type="Area2D"]
+script = ExtResource("1_fm8d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_w22j6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
