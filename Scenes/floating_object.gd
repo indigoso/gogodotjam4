@@ -3,6 +3,7 @@ extends Area2D
 @export_enum("Satellite", "Asteroid", "Planet") var obj_type: int
 
 @onready var sprite = $Sprite2D
+@onready var collider = $CollisionShape2D
 
 var asteroid_sprite = preload("res://Assets/meteorBrown_big1.png")
 
@@ -13,10 +14,11 @@ func _ready():
 			pass
 		1:
 			sprite.texture = asteroid_sprite
+			collider.shape.radius = asteroid_sprite.get_width() / Constants.PX_TO_RAD
 		2:
 			pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

@@ -14,6 +14,7 @@ scale = Vector2(1.804, 1.65129)
 texture = ExtResource("1_bekxv")
 
 [node name="PlayerTelescopeController" parent="." instance=ExtResource("2_y87bx")]
+z_index = 100
 position = Vector2(685.836, 436.755)
 
 [node name="FloatingObject" parent="." instance=ExtResource("4_w74fe")]
